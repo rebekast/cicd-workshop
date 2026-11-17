@@ -1,0 +1,14 @@
+name: learnCI
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  jobbforCI:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo ${{github.author}}
+          ifconfig
